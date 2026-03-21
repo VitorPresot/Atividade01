@@ -1,33 +1,21 @@
 import React from 'react';
-import { View, Text, TextInput, Alert, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 import styles from './style';
+import { navigate } from 'expo-router/build/global-state/routing';
+
+
 
 export default function Home() {
+  function navToDetails() {
+    navigate('Details');
+  }
+
   return (
     <View style={styles.container}>
-
-      <Image
-        source={require('../assets/images/profile.jpg')}
-        resizeMode="cover"
-        accessible
-        accessibilityLabel="Imagem de Perfil"
-        style={styles.image}
-      />
-
-      <Text style={styles.title}>Cadastro</Text>
-
-      <TextInput style={styles.input} placeholder="Digite seu nome" />
-      <TextInput style={styles.input} placeholder="Digite seu email" />
-      <TextInput style={styles.input} placeholder="Digite seu telefone" />
-      <TextInput style={styles.input} placeholder="Digite sua senha" secureTextEntry />
-
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => Alert.alert('Bem-vindo!')}
-      >
-        <Text style={styles.buttonText}>Cadastrar</Text>
-      </TouchableOpacity>
-
+      <Text style={styles.title}>Navegação Stack</Text>
+      <Pressable onPress={navToDetails} style={styles.button}>
+         <Text style={styles.buttonText}>Ir para Detalhes</Text>
+      </Pressable>
     </View>
   );
 }
