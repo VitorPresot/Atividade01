@@ -3,13 +3,14 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'lightgray',
+        backgroundColor: '#800024de',
         alignItems: 'center',
         justifyContent: 'center', 
     },
     title: {
-        fontSize: 24,
-        fontWeight: 'bold',
+        color: 'gold',
+        fontSize: 32,
+        fontFamily:'times new roman',
         marginBottom: 20,
     },
     input: {
@@ -24,15 +25,22 @@ const styles = StyleSheet.create({
     },
     button: {
         width: '80%',
-        height: 40,
-        backgroundColor: '#2A7FDB',
+        height: 50,
+        backgroundColor: 'white',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 10,
+        borderColor:'gold',
+        borderWidth: 2,
+        marginBottom: 10,
     },
-
+    subtitle:{
+        color: 'black',
+        marginBottom: 30,
+    },
     buttonText: {
-        color: 'white',
+        fontSize: 18,
+        color: 'wine',
         fontWeight: 'bold',
         textAlign: 'center'
     },
@@ -42,6 +50,22 @@ const styles = StyleSheet.create({
         borderRadius: 75,
         marginBottom: 20,
         alignSelf: 'center'
+    },
+    mapBlock: {
+    width: 100,
+    height: 100,
+    margin: 8,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: 'gold',
+    alignItems: 'center',
+    justifyContent: 'center',
+    },
+
+    mapText: {
+        fontWeight: 'bold',
+        textAlign: 'center',
+        color: '#800024',
     }
 })
 

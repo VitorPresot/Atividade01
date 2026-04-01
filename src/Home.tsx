@@ -1,32 +1,52 @@
 import React from 'react';
 import { View, Text, TextInput, Alert, Image, TouchableOpacity } from 'react-native';
+import { useRouter } from 'expo-router';
 import styles from './style';
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
 
-      <Image
-        source={require('../assets/images/profile.jpg')}
-        resizeMode="cover"
-        accessible
-        accessibilityLabel="Imagem de Perfil"
-        style={styles.image}
-      />
+      <Text style={styles.title}>Grand Palace Mall</Text>
+      <Text style={styles.subtitle}>Experiência Exclusiva</Text>
 
-      <Text style={styles.title}>Cadastro</Text>
-
-      <TextInput style={styles.input} placeholder="Digite seu nome" />
-      <TextInput style={styles.input} placeholder="Digite seu email" />
-      <TextInput style={styles.input} placeholder="Digite seu telefone" />
-      <TextInput style={styles.input} placeholder="Digite sua senha" secureTextEntry />
-
-      <TouchableOpacity
+      <TouchableOpacity 
         style={styles.button}
-        onPress={() => Alert.alert('Bem-vindo!')}
+        onPress={() => router.push('/lojas')}
       >
-        <Text style={styles.buttonText}>Cadastrar</Text>
+        <Text style={styles.buttonText}>Lojas</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => router.push('/restaurante')}
+      >
+        <Text style={styles.buttonText}>Restaurantes</Text>
+      </TouchableOpacity>
+      
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => router.push('/cinema')}
+      >
+        <Text style={styles.buttonText}>Cinema</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => router.push('/promocoes')}
+      >
+        <Text style={styles.buttonText}>Promoções</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => router.push('/mapa')}
+      >
+        <Text style={styles.buttonText}>Mapa do Shopping</Text>
+      </TouchableOpacity>
+
 
     </View>
   );
