@@ -3,70 +3,46 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#800024de',
-        alignItems: 'center',
-        justifyContent: 'center', 
+        backgroundColor: '#0a0a0a',
+        paddingHorizontal: 16,
+        paddingTop: 20,
     },
-    title: {
-        color: 'gold',
-        fontSize: 32,
-        fontFamily:'times new roman',
-        marginBottom: 20,
-    },
-    input: {
-        width: '80%',
-        height: 40,
-        backgroundColor: 'white',
-        marginBottom: 20,
-        paddingHorizontal: 10,
-        borderColor: 'gray',
-        borderWidth: 1,
-        borderRadius: 8,
-    },
-    button: {
-        width: '80%',
-        height: 50,
-        backgroundColor: 'white',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 10,
-        borderColor:'gold',
-        borderWidth: 2,
-        marginBottom: 10,
-    },
-    subtitle:{
-        color: 'black',
-        marginBottom: 30,
-    },
-    buttonText: {
-        fontSize: 18,
-        color: 'wine',
+    header: {
+        fontSize: 28,
         fontWeight: 'bold',
-        textAlign: 'center'
-    },
-    image: {
-        width: 150,
-        height: 150,
-        borderRadius: 75,
-        marginBottom: 20,
-        alignSelf: 'center'
-    },
-    mapBlock: {
-    width: 100,
-    height: 100,
-    margin: 8,
-    borderRadius: 12,
-    borderWidth: 2,
-    borderColor: 'gold',
-    alignItems: 'center',
-    justifyContent: 'center',
-    },
-
-    mapText: {
-        fontWeight: 'bold',
+        color: '#00d9ff',
+        marginBottom: 24,
         textAlign: 'center',
-        color: '#800024',
-    }
+        letterSpacing: 2,
+        textShadowColor: '#00d9ff',
+        textShadowOffset: { width: 0, height: 0 },
+        textShadowRadius: 10,
+    },
+    listContent: {
+        paddingBottom: 20,
+    },
+    carItem: {
+        backgroundColor: '#1a1a2e',
+        borderRadius: 8,
+        paddingVertical: 18,
+        paddingHorizontal: 16,
+        marginBottom: 14,
+        borderLeftWidth: 5,
+        borderLeftColor: '#00d9ff',
+        borderRightWidth: 2,
+        borderRightColor: '#ff0080',
+        shadowColor: '#00d9ff',
+        shadowOffset: { width: 0, height: 0 },
+        shadowOpacity: 0.4,
+        shadowRadius: 8,
+        elevation: 6,
+    },
+    carTitle: {
+        fontSize: 18,
+        fontWeight: '700',
+        color: '#ffffff',
+        letterSpacing: 1,
+    },
 })
 
 export default styles
