@@ -1,1 +1,3 @@
-export { default } from '@/src/Home';
+import Home from '../src/Home';
+
+export default Home;

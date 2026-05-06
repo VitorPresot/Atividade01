@@ -1,24 +1,23 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/use-color-scheme';
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="index" />
-        <Stack.Screen name="lojas" />
-        <Stack.Screen name="restaurante" />
-        <Stack.Screen name="cinema" />
-        <Stack.Screen name="promocoes" />
-        <Stack.Screen name="mapa" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <Stack
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="index" />
+      <Stack.Screen name="Quiz1" />
+      <Stack.Screen name="Quiz2" />
+      <Stack.Screen name="Quiz3" />
+      <Stack.Screen name="Quiz4" />
+      <Stack.Screen name="Quiz5" />
+      <Stack.Screen name="Quiz6" />
+      <Stack.Screen name="Quiz7" />
+      <Stack.Screen name="Quiz8" />
+      <Stack.Screen name="Quiz9" />
+      <Stack.Screen name="Quiz10" />
+    </Stack>
   );
 }
